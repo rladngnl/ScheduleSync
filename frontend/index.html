@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScheduleSync</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>ScheduleSync</h1>
+    <nav>
+      <a href="#">로그인</a>
+      <a href="#">회원가입</a>
+    </nav>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>팀</h2>
+      <ul>
+        <li>내 일정</li>
+        <li>팀1</li>
+        <li>팀2</li>
+      </ul>
+      <button>팀 생성</button>
+    </aside>
+    <main class="main-content">
+      <section class="calendar-section">
+        <div class="calendar-controls">
+          <button>&lt;</button>
+          <span>2025년 7월</span>
+          <button>&gt;</button>
+          <select>
+            <option>월간</option>
+            <option>주간</option>
+            <option>일간</option>
+          </select>
+        </div>
+        <div class="calendar-view">
+          <div class="calendar-placeholder">달력 영역</div>
+        </div>
+        <section class="schedule-form-section">
+          <h2>일정 등록/수정</h2>
+          <form id="schedule-form">
+            <input type="text" id="schedule-title" placeholder="제목" required />
+            <input type="date" id="schedule-date" required />
+            <select id="schedule-priority">
+              <option value="high">높음</option>
+              <option value="medium">중간</option>
+              <option value="low">낮음</option>
+            </select>
+            <input type="text" id="schedule-desc" placeholder="설명" />
+            <button type="submit" id="schedule-submit">등록</button>
+          </form>
+        </section>
+        <section class="schedule-list-section">
+          <h2>일정 목록</h2>
+          <ul id="schedule-list"></ul>
+        </section>
+      </section>
+    </main>
+    <aside class="priority-panel">
+      <h2>우선순위</h2>
+      <div class="priority-group now">
+        <h3>지금 해야 할 일</h3>
+        <ul><li>과제 제출</li></ul>
+      </div>
+      <div class="priority-group soon">
+        <h3>곧 해야 할 일 (D-3)</h3>
+        <ul><li>팀 미팅 준비</li></ul>
+      </div>
+      <div class="priority-group later">
+        <h3>나중에 할 일</h3>
+        <ul><li>프로젝트 아이디어 정리</li></ul>
+      </div>
+      <div class="notification-panel">
+        <h2>알림</h2>
+        <ul><li>회의 30분 전 알림</li></ul>
+      </div>
+    </aside>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
