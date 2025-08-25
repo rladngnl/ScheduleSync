@@ -1,0 +1,1328 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#"
+     xml:base="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:ontology="http://www.tackle_judgement.com/ontology#">
+    <owl:Ontology rdf:about="urn:absolute:7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#frameId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.tackle_judgement.com/ontology#frameId"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#involves -->
+
+    <owl:AnnotationProperty rdf:about="http://www.tackle_judgement.com/ontology#involves"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#performedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.tackle_judgement.com/ontology#performedBy"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#timestamp -->
+
+    <owl:AnnotationProperty rdf:about="http://www.tackle_judgement.com/ontology#timestamp"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#ActionBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#ActionBy">
+        <owl:inverseOf rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasAction">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasActionState -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasActionState">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasContact">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Event"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasContactBall -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasContactBall">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasContact"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasContactPlayer -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasContactPlayer">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasContact"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasEvent">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Contact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasExtend -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasExtend">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Extend"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasFall -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasFall">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Fall"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasIntercept -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasIntercept">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Intercept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasLying -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasLying">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Lying"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasSlide -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasSlide">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Slide"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasStand -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasStand">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Stand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#hasTackle -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#hasTackle">
+        <rdfs:subPropertyOf rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Tackle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#interactsWithBall -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#interactsWithBall">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Ball"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#occursInFrame -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#occursInFrame">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Frame"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#resultIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#resultIn">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#useBodyParty -->
+
+    <owl:ObjectProperty rdf:about="http://www.tackle_judgement.com/ontology#useBodyParty">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.tackle_judgement.com/ontology#BodyPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isContact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isContact">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isExtended -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isExtended">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isExtending -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isExtending">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isFall -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isFall">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isFalling -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isFalling">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isIntercepting -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isIntercepting">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isLying -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isLying">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isSliding -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isSliding">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isStanding -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isStanding">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#isTackling -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tackle_judgement.com/ontology#isTackling">
+        <rdfs:domain rdf:resource="http://www.tackle_judgement.com/ontology#ActionState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Action -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Action"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#ActionState -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#ActionState"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Ball -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Ball"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#BodyPart -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#BodyPart"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Contact -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Contact">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Event -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Event"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Extend -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Extend">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Fall -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Fall">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Foot -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Foot">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Frame -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Frame"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Intercept -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Intercept">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Leg -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Leg">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Lying -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Lying">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Player -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Player"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Scene -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Scene"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Slide -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Slide">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Stand -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Stand">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Tackle -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Tackle">
+        <rdfs:subClassOf rdf:resource="http://www.tackle_judgement.com/ontology#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Tacklee -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Tacklee"/>
+    
+
+
+    <!-- http://www.tackle_judgement.com/ontology#Tackler -->
+
+    <owl:Class rdf:about="http://www.tackle_judgement.com/ontology#Tackler"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.tackle_judgement.com/ontology#Player_B">
+        <rdfs:comment>Player standing on the left, extending his right arm forward toward the lying player.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#a1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#a2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#s1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#s2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#frame">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test lying and extend with no boolean value</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#a1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Lying"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#a1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasAction"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#a2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Extend"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#a2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complex in frame</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule9</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isFalling"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#s2"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#s1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p2"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#s2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p1"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#occursInFrame"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#s2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#frame"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#occursInFrame"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#s1"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#frame"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isTackling"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#s1"/>
+                                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tackle with contact</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule10</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isTackling"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isContact"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intercepting, Extending</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule8</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isIntercepting"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isExtending"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sliding, Extending</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isExtending"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isSliding"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sliding, Extending, Tackling</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isExtending"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isSliding"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isTackling"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falling -&gt; Tacklee</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isFalling"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tacklee"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sliding , Tackling</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isSliding"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isTackling"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standing, Tackling</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isTackling"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isStanding"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic Tackling</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Player"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#hasActionState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.tackle_judgement.com/ontology#isTackling"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#state"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.tackle_judgement.com/ontology#Tackler"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/woohwi/ontologies/2025/7/untitled-ontology-23#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
